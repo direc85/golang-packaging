@@ -1,0 +1,3 @@
+[submodule "golang-packaging"]
+	path = golang-packaging
+	url = https://github.com/openSUSE/golang-packaging.git
