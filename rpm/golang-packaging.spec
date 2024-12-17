@@ -44,13 +44,13 @@ A toolchain to help packaging golang, written in bash.
 mkdir -p %{buildroot}%{_rpmmacrodir}
 mkdir -p %{buildroot}%{_rpmconfigdir}
 
-install -m0755 golang.prov %{buildroot}%{_rpmconfigdir}
-install -m0755 golang.req %{buildroot}%{_rpmconfigdir}
-install -m0755 golang.sh %{buildroot}%{_rpmconfigdir}
-install -m0644 macros.go %{buildroot}%{_rpmmacrodir}
+install -m0755 %{name}/golang.prov %{buildroot}%{_rpmconfigdir}
+install -m0755 %{name}/golang.req %{buildroot}%{_rpmconfigdir}
+install -m0755 %{name}/golang.sh %{buildroot}%{_rpmconfigdir}
+install -m0644 %{name}/macros.go %{buildroot}%{_rpmmacrodir}
 
 mkdir -p %{buildroot}%{_rpmconfigdir}/fileattrs
-install -m0644 golang.attr %{buildroot}%{_rpmconfigdir}/fileattrs/
+install -m0644 %{name}/golang.attr %{buildroot}%{_rpmconfigdir}/fileattrs/
 
 %files
 %defattr(-,root,root)
